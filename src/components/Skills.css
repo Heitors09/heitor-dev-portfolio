@@ -1,0 +1,118 @@
+/* ===== SKILLS SECTION ===== */
+.skills-section {
+  padding: var(--section-padding) 0;
+  position: relative;
+}
+
+.skills-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(249, 115, 22, 0.02) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+.skills-header {
+  margin-bottom: 48px;
+}
+
+/* ── Row layout ── */
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+}
+
+.skills-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 24px;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.3s var(--ease-out);
+}
+
+.skills-row:hover {
+  background: linear-gradient(90deg, var(--bg-card) 0%, transparent 60%);
+  margin: 0 -24px;
+  padding: 20px 24px;
+  border-radius: var(--radius-sm);
+}
+
+/* Category label */
+.skills-row-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.skills-row-icon {
+  display: flex;
+  align-items: center;
+  color: var(--text-primary);
+  opacity: 0.6;
+  transition: opacity 0.3s var(--ease-out);
+}
+
+.skills-row:hover .skills-row-icon {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.skills-row-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: color 0.3s var(--ease-out);
+}
+
+.skills-row:hover .skills-row-title {
+  color: var(--text-secondary);
+}
+
+/* Pills */
+.skills-row-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 14px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-light);
+  border-radius: 100px;
+  transition: all 0.25s var(--ease-out);
+  cursor: default;
+}
+
+.skill-pill:hover {
+  color: var(--accent);
+  border-color: var(--border-accent);
+  background: var(--accent-glow);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .skills-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 18px 0;
+  }
+
+  .skills-row:hover {
+    margin: 0 -16px;
+    padding: 18px 16px;
+  }
+}
