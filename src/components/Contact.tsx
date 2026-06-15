@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './Contact.css'
-import { EnvelopeSimple, LinkedinLogo, GithubLogo, CheckCircle, PaperPlaneRight } from '@phosphor-icons/react'
+import { EnvelopeSimple, LinkedinLogo } from '@phosphor-icons/react'
 
 export default function Contact() {
   const [formData, setFormData] = useState({

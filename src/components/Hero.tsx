@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import photoHero from '../assets/photo-hero.jpg'
 import './Hero.css'
-import { ChatCircle, ArrowDownRight } from '@phosphor-icons/react'
+import { ArrowDownRight } from '@phosphor-icons/react'
 
 export default function Hero() {
   const titleRef = useRef<HTMLHeadingElement>(null)
